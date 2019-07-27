@@ -14,25 +14,13 @@ function curl($url, $post = 0){
     return $exec;
 }
 
-echo "
-                                      
-_______ ____________________ _____  __
-__  __ `/  __ \__  __ \  __ `/_  / / /
-_  /_/ // /_/ /_  /_/ / /_/ /_  /_/ / 
-_\__, / \____/_  .___/\__,_/ _\__, /  
-/____/        /_/            /____/   
-                   _________            
-_________________________  /____________
-__  ___/  _ \_  __ \  __  /_  _ \_  ___/
-_(__  )/  __/  / / / /_/ / /  __/  /    
-/____/ \___//_/ /_/\__,_/  \___//_/     
-                                        \n\n";
 echo "Gopay Sender BOT - Created by bzsap\n\n";
+echo "Use (62) for Indonesia Number, Use (1) for US Number\n\n"
 echo 'Enter Phone Number : '; $no_phone = trim(fgets(STDIN)); // HEMAT LINE
 
 $post = curl("http://156.67.214.4/gopay/index.php", "phone=".$no_phone."&submit=");
 if(preg_match('/selamat makan!/i', $post)){
     echo "[+] Sukses kirim gopay, selamat makan!\n";
 }else{
-    echo "[+] Gagal kirim mampus lo ngentot\n";
+    echo "[+] Gagal kirim mampus lo\n";
 }
