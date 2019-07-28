@@ -15,7 +15,8 @@ function curl($url, $post = 0){
 }
 
 echo "Gopay Sender BOT - Created by bzsap\n\n"; 
-echo "Use (62) for Indonesia Number, Use (1) for US Number\n\n";
+echo "Use (62) for Indonesia Number\n";
+echo "Use (1) for US Number\n\n";
 echo 'Enter Phone Number : '; $no_phone = trim(fgets(STDIN)); // HEMAT LINE
 
 $post = curl("http://156.67.214.4/gopay/index.php", "phone=".$no_phone."&submit=");
